@@ -1,0 +1,263 @@
+@font-face {
+  font-family: American Captain;
+  src: url(fonts/American_Captain.ttf);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  font-family: "Square721 BT", sans-serif;
+  height: 100%;
+  position: relative;
+}
+
+header {
+  position: absolute;
+  padding: 1em;
+  z-index: 999;
+  width: 100%;
+}
+
+header .logo {
+  display: block;
+  margin: 0 auto;
+  width: 25%;
+  margin-bottom: 10px;
+}
+
+header nav ul {
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+header nav ul li a {
+  text-decoration: none;
+  font-weight: 800;
+  color: #000;
+}
+
+.wrapper {
+  height: 100vh;
+  /* ---- Hero Section ---- */
+  /* ---- Details section ---- */
+}
+
+.wrapper section {
+  padding: 1em;
+}
+
+.wrapper .hero .image {
+  margin-top: 5em;
+  width: 100%;
+  position: relative;
+}
+
+.wrapper .hero .image img {
+  width: 100%;
+}
+
+.wrapper .hero .image .bgcolor {
+  background: url("/img/ford_raptor_blue.png") center center/contain no-repeat;
+  width: 100%;
+  padding-top: 56%;
+}
+
+.wrapper .hero .color-text {
+  display: none;
+}
+
+.wrapper .hero .swatch {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-bottom: 20px;
+}
+
+.wrapper .hero .swatch .color {
+  margin: 0 1em;
+  height: 3em;
+  width: 3em;
+  cursor: pointer;
+}
+
+.wrapper .hero .swatch .blue {
+  background-color: #2A57B2;
+}
+
+.wrapper .hero .swatch .red {
+  background-color: #791014;
+}
+
+.wrapper .hero .swatch .black {
+  background-color: black;
+}
+
+.wrapper .hero .swatch .gray {
+  background-color: #6D7285;
+}
+
+.wrapper .details {
+  text-align: center;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(42, 87, 178, 0.7)), to(rgba(42, 87, 178, 0.7))), url("/img/bg-description.png");
+  background: linear-gradient(rgba(42, 87, 178, 0.7), rgba(42, 87, 178, 0.7)), url("/img/bg-description.png");
+  background-position: center center;
+  background-size: cover;
+  width: 100%;
+}
+
+.wrapper .details .headline {
+  margin: 20px 0;
+}
+
+.wrapper .details .headline h3 {
+  color: #fff;
+  font-size: 3rem;
+  font-family: 'American Captain', sans-serif;
+  text-transform: uppercase;
+  font-weight: 800;
+}
+
+.wrapper .details .headline span {
+  display: block;
+}
+
+.wrapper .details .description {
+  color: #fff;
+  font-size: 1.1rem;
+  margin-bottom: 20px;
+}
+
+.wrapper .details .button {
+  padding: 30px 0;
+}
+
+.wrapper .details .button a {
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 1.2rem;
+  padding: 0.5em 1em 0.5em 1em;
+  border: 3px solid #fff;
+  text-decoration: none;
+}
+
+@media only screen and (min-width: 1180px) {
+  body {
+    overflow: hidden;
+  }
+  header {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr minmax(400px, 1fr) 1fr;
+        grid-template-columns: 1fr minmax(400px, 1fr) 1fr;
+    padding: 40px;
+  }
+  header .logo {
+    width: 20%;
+    margin-bottom: 0;
+    margin: 0;
+  }
+  header nav li {
+    margin: 0 1.2em;
+  }
+  header .search-icon {
+    justify-self: flex-end;
+    width: 5%;
+  }
+  .wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .wrapper .hero {
+    height: 100vh;
+    -ms-flex-preferred-size: 70%;
+        flex-basis: 70%;
+    padding: 0;
+  }
+  .wrapper .hero .image {
+    margin-top: 4em;
+  }
+  .wrapper .hero .color-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .wrapper .hero .color-container .color-text {
+    height: 3em;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-preferred-size: 50%;
+        flex-basis: 50%;
+    background: #2A57B2;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .wrapper .hero .color-container .color-text p {
+    font-size: 1.5em;
+    text-transform: uppercase;
+    color: #fff;
+    padding-left: 40px;
+  }
+  .wrapper .hero .color-container .swatch {
+    margin-bottom: 0;
+    -ms-flex-preferred-size: 50%;
+        flex-basis: 50%;
+  }
+  .wrapper .hero .color-container .swatch .color {
+    margin: 0 .5em;
+  }
+  .wrapper .details {
+    text-align: left;
+    padding: 40px;
+    -ms-flex-preferred-size: 30%;
+        flex-basis: 30%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    position: relative;
+  }
+  .wrapper .details .headline {
+    font-size: 2.5rem;
+    line-height: 1;
+    margin-bottom: 30px;
+  }
+  .wrapper .details .description {
+    text-align: justify;
+    font-size: 1rem;
+  }
+  .wrapper .details .button {
+    position: absolute;
+    bottom: 15px;
+    right: 40px;
+  }
+}
+/*# sourceMappingURL=main.css.map */

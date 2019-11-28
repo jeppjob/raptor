@@ -1,0 +1,218 @@
+@font-face {
+  font-family: American Captain;
+  src: url(fonts/American_Captain.ttf);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Square721 BT", sans-serif;
+  height: 100%;
+  position: relative;
+}
+
+header {
+  position: absolute;
+  padding: 1em;
+  z-index: 999;
+  width: 100%;
+  .logo {
+    display: block;
+    margin: 0 auto;
+    width: 25%;
+    margin-bottom: 10px;
+  }
+  nav {
+    ul {
+      list-style: none;
+      display: flex;
+      justify-content: space-around;
+      flex-direction: row;
+      li {
+        a {
+          text-decoration: none;
+          font-weight: 800;
+          color: #000;
+        }
+      }
+    }
+  }
+}
+.wrapper {
+  height: 100vh;
+  section {
+    padding: 1em;
+  }
+
+  /* ---- Hero Section ---- */
+  .hero {
+    .image {
+      margin-top: 5em;
+      width: 100%;
+      position: relative;
+      img {
+        width: 100%;
+      }
+      .bgcolor{
+background: url('/img/ford_raptor_blue.png') center center/contain no-repeat;
+        width: 100%;
+        padding-top: 56%;
+      }
+    }
+    .color-text {
+      display: none;
+    }
+    .swatch {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 20px;
+      .color {
+        margin: 0 1em;
+        height: 3em;
+        width: 3em;
+        cursor: pointer;
+      }
+      .blue {
+        background-color: #2A57B2;
+      }
+      .red {
+        background-color: #791014;
+      }
+      .black {
+        background-color: black;
+      }
+      .gray {
+        background-color: #6D7285;
+      }
+    }
+  }
+
+  /* ---- Details section ---- */
+  .details {
+    text-align: center;
+    background: linear-gradient(rgba(42, 87, 178, 0.7),rgba(42, 87, 178, 0.7)),
+      url("/img/bg-description.png");
+    background-position: center center;
+    background-size: cover;
+    width: 100%;
+    .headline {
+      
+      margin: 20px 0;
+      h3{
+        color: #fff;
+      font-size: 3rem;
+      font-family: 'American Captain', sans-serif;
+      text-transform: uppercase;
+      font-weight: 800;
+      }
+      span {
+        display: block;
+      }
+    }
+
+    .description {
+      color: #fff;
+      font-size: 1.1rem;
+      margin-bottom: 20px;
+    }
+
+    .button {
+      padding: 30px 0;
+      a {
+        color: #fff;
+        text-transform: uppercase;
+        font-weight: 700;
+        font-size: 1.2rem;
+        padding: 0.5em 1em 0.5em 1em;
+        border: 3px solid #fff;
+        text-decoration: none;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 1180px) {
+  body{
+    overflow: hidden;
+  }
+  header {
+    display: grid;
+    grid-template-columns: 1fr minmax(400px,1fr) 1fr ;
+    padding: 40px;
+    
+    .logo{
+      width: 20%;
+      margin-bottom: 0;
+      margin:0;
+    }nav{
+      li{
+        margin: 0 1.2em;
+      }
+    }
+    .search-icon{
+      justify-self: flex-end;
+      width: 5%;
+    }
+  }
+  .wrapper {
+    display: flex;
+    .hero {
+      height: 100vh;
+      flex-basis: 70%;
+      padding: 0;
+      .image{
+        margin-top: 4em;
+      }
+      .color-container {
+        display: flex;
+        align-items: center;
+        .color-text {
+          height: 3em;
+          display: flex;
+          flex-basis: 50%;
+          background: #2A57B2;
+          align-items: center;
+          p {
+            font-size: 1.5em;
+            text-transform: uppercase;
+            color: #fff;
+            padding-left: 40px;
+
+          }
+        }
+        .swatch {
+          margin-bottom: 0;
+          flex-basis: 50%;
+          .color{
+            margin: 0 .5em;
+          }
+        }
+      }
+    }
+    .details {
+      text-align: left;
+      padding: 40px;
+      flex-basis: 30%;
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      position: relative;
+      .headline {
+        font-size: 2.5rem;
+        line-height: 1;
+        margin-bottom: 30px;
+      }
+      .description {
+        text-align: justify;
+        font-size: 1rem;
+      }
+      .button {
+        position: absolute;
+        bottom: 15px;
+        right: 40px;
+      }
+    }
+  }
+}
